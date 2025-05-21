@@ -11,7 +11,7 @@ function App() {
   
   // let counter = 55;
 
-  const increase = ()=>{
+  const increase = ()=>{x
     console.log('clicked',counter)
     // counter = counter + 1;
     setCounter(counter + 1  )
