@@ -1,0 +1,43 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+ }
+ body{
+  background-color: black;
+ }
+ .movie-container{
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+ }
+.card{
+  width: 250px;
+  height: 400px;
+  padding: 5px;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  /* background-color: red; */
+}
+.card img{
+  width: 100%;
+  height: 300px;
+    transition:all 0.2s ease-in;
+    padding-bottom: 10px;
+
+}
+.card img:hover{
+  scale: 1.1;
+}
+
