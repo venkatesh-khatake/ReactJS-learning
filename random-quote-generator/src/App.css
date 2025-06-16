@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote-box{
+    width: 60%;
+    height: 250px;
+    background-color: aliceblue;
+    color:black;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.quote-box h1{
+    font-size: 35px;
+}
+.quote-box h2{
+    font-size: 20px;
+    text-align: right;
+}
+.quote-box button{
+    align-self: flex-end;
+}
