@@ -1,34 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
+import './App.css';
+const App = () => {
+  const [count, setCount] = useState(0);
+  const incCount = ()=>{
+    setCount(count + 1);
+  }
+  const decCount = ()=>{
+    setCount(count - 1);
+  }
+  const resetCount = ()=>{
+    setCount(0);
+  }
 
-function App() {
-  const [count, setCount] = useState(0)
+  const [isDark, setIsDark] = useState(true);
+
+  const handleTheme = ()=>{
+    setIsDark(!isDark);
+  }
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    
+    <div style={{
+      backgroundColor:isDark ? "black" :  "white",
+      color: isDark ? "white" : "black",
+      padding:"50px",
+      borderRadius:"18px"
+      
+    }}>
+      <h1>Counter App</h1>
+      <h1 style={{
+        backgroundColor:"tomato",
+        borderRadius:"7px",
+        color:"white",
+        padding:"5px"
+      }}>{count}</h1>
+      <button onClick={incCount}>Increase</button>
+      <button onClick={resetCount} style={{margin:"0px 10px"}}>Reset</button>
+      <button onClick={decCount}>Decrease</button>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div
+        style={{
+          margin:"10px 0px"
+        }}
+        >
+                  <button onClick={handleTheme}>Theme</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+        </>
   )
 }
 
