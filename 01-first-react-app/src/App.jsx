@@ -9,6 +9,9 @@ import ShowHide from './ShowHide';
 import UserCard from './UserCard';
 import InputName from './InputName';
 import ProfileCard from './ProfileCard';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 function App(){
   const [name, setName] = useState("");
   const [submittedName, setSubmittedName] = useState("");
@@ -36,7 +39,7 @@ function App(){
       <Greeting name = "Venkey"/> */}
 
     
- <h1>User List</h1>
+ {/* <h1>User List</h1>
       <div
         style={{
           display:'flex',
@@ -73,7 +76,12 @@ function App(){
 
 
         <hr />
-        <ProfileCard/>
+        <ProfileCard/> */}
+
+        <Header/>
+        <Content description={"Hello, This is Venkatesh "}/>
+        <Footer/>
+
     </>
   )
 }
