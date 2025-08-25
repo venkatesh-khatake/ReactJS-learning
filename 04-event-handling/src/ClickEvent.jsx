@@ -28,7 +28,8 @@ let r,g,b;
         flexDirection:"column",
         alignItems:"center",
         justifyContent:"center",
-        border:"1px solid white"
+        border:"1px solid white",
+        transition:"all 0.5s ease"
     }}
     >
       <button onClick={handleColor}>Click me</button>
@@ -64,7 +65,9 @@ export const MouseOverEvent = () => {
         flexDirection:"column",
         alignItems:"center",
         justifyContent:"center",
-        border:"1px solid white"
+        border:"1px solid white",
+                transition:"all 0.5s ease"
+
     }}
     onMouseOver={handleColor}
     >
